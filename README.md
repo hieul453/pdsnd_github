@@ -26,3 +26,6 @@ Update Error Handling when user wants to restart the software
 
 ### Fix Code Logic
 Fix code logic making the software to crash when user selects June
+
+### Optimize Code
+Delete some redundant comments and white spaces
