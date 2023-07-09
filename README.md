@@ -23,3 +23,6 @@ This method is used to display raw data if customers want to see
 
 ### Update Error Handling
 Update Error Handling when user wants to restart the software
+
+### Fix Code Logic
+Fix code logic making the software to crash when user selects June
