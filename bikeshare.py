@@ -22,8 +22,7 @@ def get_filters():
         (str) day - name of the day of week to filter by, or "all" to apply no day filter
     """
     print('Hello! Let\'s explore some US bikeshare data!')
-    # TO DO: get user input for city (chicago, new york city, washington). HINT: Use a while loop to handle invalid
-    # inputs
+
     while True:
         city = input("Enter the city name (chicago, new york city, washington): ").lower()
         if city not in CITY_DATA:
@@ -31,7 +30,6 @@ def get_filters():
         else:
             break
 
-    # TO DO: get user input for month (all, january, february, ... , june)
     while True:
         month = input("Enter the month to filter by (all, january, february, ... , june): ").lower()
         if month not in MONTH:
@@ -39,7 +37,6 @@ def get_filters():
         else:
             break
 
-    # TO DO: get user input for day of week (all, monday, tuesday, ... sunday)
     while True:
         day = input("Enter the day of week to filter by (all, monday, tuesday, ... sunday): ").lower()
         if day not in DAY:
@@ -97,15 +94,12 @@ def time_stats(df):
     print('\nCalculating The Most Frequent Times of Travel...\n')
     start_time = time.time()
 
-    # TO DO: display the most common month
     popular_month = df['month'].mode()[0]
     print('Most Common Month:', popular_month)
 
-    # TO DO: display the most common day of week
     popular_day = df['day_of_week'].mode()[0]
     print('Most Common Day of Week:', popular_day)
 
-    # TO DO: display the most common start hour
     popular_hour = df['hour'].mode()[0]
     print('Most Common Start Hour:', popular_hour)
 
@@ -119,15 +113,12 @@ def station_stats(df):
     print('\nCalculating The Most Popular Stations and Trip...\n')
     start_time = time.time()
 
-    # TO DO: display most commonly used start station
     popular_start_station = df['Start Station'].mode()[0]
     print('Most Common Start Station:', popular_start_station)
 
-    # TO DO: display most commonly used end station
     popular_end_station = df['End Station'].mode()[0]
     print('Most Common End Station:', popular_end_station)
 
-    # TO DO: display most frequent combination of start station and end station trip
     df['Start-End Station'] = df['Start Station'] + ' - ' + df['End Station']
     popular_station_combo = df['Start-End Station'].mode()[0]
     print('Most Common Trip (Start-End):', popular_station_combo)
@@ -142,11 +133,9 @@ def trip_duration_stats(df):
     print('\nCalculating Trip Duration...\n')
     start_time = time.time()
 
-    # TO DO: display total travel time
     total_travel_time = df['Trip Duration'].sum()
     print('Total Travel Time:', total_travel_time)
 
-    # TO DO: display mean travel time
     mean_travel_time = df['Trip Duration'].mean()
     print('Average Travel Time:', mean_travel_time)
 
@@ -160,20 +149,17 @@ def user_stats(df, city):
     print('\nCalculating User Stats...\n')
     start_time = time.time()
 
-    # TO DO: Display counts of user types
     user_types = df['User Type'].value_counts()
     print('User Types:\n', user_types)
 
     if city != 'washington':
-        # TO DO: Display counts of gender
+        
         gender_counts = df['Gender'].value_counts()
         print('\nGender Counts:\n', gender_counts)
 
-        # TO DO: Display earliest, most recent, and most common year of birth
         earliest_year = df['Birth Year'].min()
         most_recent_year = df['Birth Year'].max()
 
-        # Using numpy to find the most common year of birth
         (values, counts) = np.unique(df['Birth Year'].dropna(), return_counts=True)
         ind = np.argmax(counts)
         most_common_year = values[ind]
@@ -202,6 +188,7 @@ def display_raw_data(df):
 
         if show_data == 'yes':
             while end <= df.shape[0] - 1:
+                
                 raw_data_json = df.iloc[start:end, :].to_json(orient='records')
                 pretty_json = json.dumps(json.loads(raw_data_json), indent=4)
                 print(pretty_json)
@@ -234,9 +221,10 @@ def display_raw_data(df):
 def main():
     is_continued = True
     while is_continued:
+        
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
+        
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
