@@ -188,6 +188,7 @@ def display_raw_data(df):
 
         if show_data == 'yes':
             while end <= df.shape[0] - 1:
+                
                 raw_data_json = df.iloc[start:end, :].to_json(orient='records')
                 pretty_json = json.dumps(json.loads(raw_data_json), indent=4)
                 print(pretty_json)
@@ -220,9 +221,10 @@ def display_raw_data(df):
 def main():
     is_continued = True
     while is_continued:
+        
         city, month, day = get_filters()
         df = load_data(city, month, day)
-
+        
         time_stats(df)
         station_stats(df)
         trip_duration_stats(df)
