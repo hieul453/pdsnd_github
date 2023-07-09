@@ -17,3 +17,6 @@ It's important to give proper credit. Add links to any repo that inspired you or
 
 ### Update user_stats Method
 Add code to display No data found for Gender, Year of Birth when csv file is washington
+
+### Write new method display_raw_data
+This method is used to display raw data if customers want to see
