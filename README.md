@@ -26,6 +26,6 @@ For any queries or issues regarding this project, you can raise an issue in the 
 - [StackOverflow Python](https://stackoverflow.com/questions/tagged/python)
 
 ## Who maintains and contributes to the project
-This project is currently maintained by [Your Name]. We welcome and appreciate all contributions. If you're interested in contributing, feel free to fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
+This project is currently maintained by Le Duc Hieu. We welcome and appreciate all contributions. If you're interested in contributing, feel free to fork the repository and submit a pull request. For major changes, please open an issue first to discuss what you would like to change.
 
 We hope this project proves valuable in your exploration and understanding of bikeshare usage in these three major US cities. Enjoy!
