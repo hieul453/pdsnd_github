@@ -15,17 +15,17 @@ Include the files used
 ### Credits
 It's important to give proper credit. Add links to any repo that inspired you or blogposts you consulted.
 
-### Update user_stats Method
-Add code to display No data found for Gender, Year of Birth when csv file is washington
+### feat: update user_stats()
+Add code to display No data found for Gender, Year of Birth when csv file is washington in user_stats()
 
-### Write new method display_raw_data
+### feat: add new method display_raw_data()
 This method is used to display raw data if customers want to see
 
-### Update Error Handling
+### feat: Update Error Handling
 Update Error Handling when user wants to restart the software
 
-### Fix Code Logic
+### fix: Fix Error In Code Logic
 Fix code logic making the software to crash when user selects June
 
-### Optimize Code
+### refactor: Optimize Code
 Delete some redundant comments and white spaces
