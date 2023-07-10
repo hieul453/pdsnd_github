@@ -21,7 +21,7 @@ Add code to display No data found for Gender, Year of Birth when csv file is was
 ### feat: add new method display_raw_data()
 This method is used to display raw data if customers want to see
 
-### Update Error Handling
+### feat: Update Error Handling
 Update Error Handling when user wants to restart the software
 
 ### Fix Code Logic
