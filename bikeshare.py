@@ -242,6 +242,5 @@ def main():
             else:
                 print("Invalid input. Please enter yes or no.")
 
-
 if __name__ == "__main__":
     main()
